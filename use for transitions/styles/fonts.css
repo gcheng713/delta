@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Sohne";
+  src: url(/fonts/sohne-buch.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Sohne";
+  src: url(/fonts/sohne-kraftig.woff2) format("woff2");
+  font-weight: 500;
+  font-style: bold;
+  font-display: optional;
+}

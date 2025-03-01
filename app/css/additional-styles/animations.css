@@ -1,0 +1,96 @@
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+    filter: blur(4px);
+  }
+  50% {
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-50%, -55%) rotate(5deg) scale(1.05);
+  }
+  50% {
+    transform: translate(-55%, -50%) rotate(0deg) scale(1.1);
+  }
+  75% {
+    transform: translate(-50%, -45%) rotate(-5deg) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-30px) translateX(15px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-60px) translateX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes title-word-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-enter {
+  animation: enter 1s ease-out;
+}
+
+.animate-enter-delay-100 {
+  animation: enter 1s ease-out;
+  animation-delay: 100ms;
+}
+
+.animate-enter-delay-200 {
+  animation: enter 1s ease-out;
+  animation-delay: 200ms;
+}
+
+.animate-enter-delay-300 {
+  animation: enter 1s ease-out;
+  animation-delay: 300ms;
+}
+
+.animate-gradient {
+  animation: gradient-shift 15s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+.animate-title-word {
+  animation: title-word-animation 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  opacity: 0;
+}

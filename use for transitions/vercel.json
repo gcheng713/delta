@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "redirects": [
+    {
+      "source": "/monterey",
+      "destination": "https://gumroad.com/l/dvctd",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/notes",
+      "destination": "https://publish.obsidian.md/serve?url=nelson.co/notes"
+    },
+    {
+      "source": "/notes/:path*",
+      "destination": "https://publish.obsidian.md/serve?url=nelson.co/notes/:path*"
+    }
+  ]
+}
