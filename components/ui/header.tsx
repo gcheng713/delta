@@ -14,10 +14,20 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Floating Demo Button */}
-      <div className="fixed bottom-12 right-6 z-50">
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-12 right-6 z-50 flex gap-4">
         <Link 
-          href="/demo" 
+          href="https://github.com/natask/infra_gpu_hack" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 hover:from-gray-900 hover:via-gray-800 hover:to-gray-900 text-white shadow-lg hover:shadow-xl transition-all duration-200 ease-in-out transform hover:scale-105"
+        >
+          View on GitHub
+        </Link>
+        <Link 
+          href="https://p01--open-webui--78wn8zsyzjvg.code.run" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 hover:from-blue-600 hover:via-blue-500 hover:to-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-200 ease-in-out transform hover:scale-105"
         >
           Try Demo
