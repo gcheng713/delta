@@ -100,10 +100,10 @@ export default function QuoteTitle({
     ];
     
     // Generate completely random gibberish with no structure preservation
-    const generateRandomGibberish = (finalCode) => {
+    const generateRandomGibberish = (finalCode: string[]) => {
       return finalCode.map(line => {
         // Keep indentation
-        const indentation = line.match(/^\s*/)[0];
+        const indentation = line.match(/^\s*/) ? line.match(/^\s*/)![0] : '';
         const lineWithoutIndent = line.trimStart();
         
         // Generate random characters of the same length as the original line
@@ -117,7 +117,7 @@ export default function QuoteTitle({
     };
     
     // Generate partially revealed solutions (revealing from left to right)
-    const generatePartialSolutions = (finalCode) => {
+    const generatePartialSolutions = (finalCode: string[]) => {
       const stages = [];
       
       // First generate 8 completely random stages
@@ -130,8 +130,8 @@ export default function QuoteTitle({
       for (let stage = 1; stage <= numRevealStages; stage++) {
         const revealRatio = stage / numRevealStages;
         
-        stages.push(finalCode.map(line => {
-          const indentation = line.match(/^\s*/)[0];
+        stages.push(finalCode.map((line: string) => {
+          const indentation = line.match(/^\s*/) ? line.match(/^\s*/)![0] : '';
           const lineWithoutIndent = line.trimStart();
           
           // Calculate how many characters to reveal from the left
@@ -243,7 +243,7 @@ export default function QuoteTitle({
 
 
     // Function to highlight Python code syntax
-    const highlightPythonCode = (text) => {
+    const highlightPythonCode = (text: string) => {
       // First escape HTML special characters
       let html = text
         .replace(/&/g, '&amp;')
